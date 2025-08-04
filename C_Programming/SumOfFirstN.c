@@ -1,3 +1,4 @@
+// sum of firnt n numbers
 #include <stdio.h>
 
 int main()
