@@ -17,7 +17,7 @@ void sparse_array(char *queries[], int n, int n1, char *stri[])
   }
   for (int i = 0; i < n; i++)
   {
-    printf("%d", arr[i]);
+    printf("%d\n", arr[i]);
   }
 }
 int main()
