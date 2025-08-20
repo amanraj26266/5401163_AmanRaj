@@ -4,15 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 int sockMerchant(int n, int ar[]) {
-    int count[101] = {0}; // Array to count occurrences of each color
+    int count[101] = {0}; 
     int pairs = 0;
 
-    // Count the occurrences of each sock color
     for (int i = 0; i < n; i++) {
         count[ar[i]]++;
     }
 
-    // Calculate the number of pairs for each color
     for (int i = 0; i < 101; i++) {
         pairs += count[i] / 2;
     }
@@ -24,10 +22,10 @@ int main() {
     printf("Enter the number of socks: ");
     scanf("%d", &n);
     
-    int *ar = (int *)malloc(n * sizeof(int)); // Dynamically allocate memory for sock colors
+    int *ar = (int *)malloc(n * sizeof(int)); 
     if (ar == NULL) {
         fprintf(stderr, "Memory allocation failed\n");
-        return 1; // Exit if memory allocation fails
+        return 1; 
     }
 
     printf("Enter the sock colors: ");
@@ -38,6 +36,6 @@ int main() {
     int result = sockMerchant(n, ar);
     printf("Number of pairs of socks: %d\n", result);
 
-    free(ar); // Free the allocated memory
+    free(ar); 
     return 0;
 }
